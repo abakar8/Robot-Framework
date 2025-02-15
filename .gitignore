@@ -1,0 +1,8 @@
+# Fichiers JetBrains (IntelliJ, PyCharm, etc.)
+.idea/
+
+# Fichiers de logs
+*.log
+
+# Dossiers de résultats Robot Framework
+Resultats/

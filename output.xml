@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-15T18:09:51.252323" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\Tests">
+<suite id="s1-s1" name="Login" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\Tests\login.robot">
+<test id="s1-s1-t1" name="Parcours Complet" line="18">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.736587" elapsed="0.000211"/>
+</kw>
+<kw name="open OrangeHRM">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.737690" elapsed="0.000113"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.737938" elapsed="0.000075"/>
+</kw>
+<status status="PASS" start="2025-02-15T18:09:51.737371" elapsed="0.000708"/>
+</kw>
+<kw name="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.738687" elapsed="0.000286"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.739106" elapsed="0.000119"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.739336" elapsed="0.000106"/>
+</kw>
+<status status="PASS" start="2025-02-15T18:09:51.738450" elapsed="0.001055"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.739879" elapsed="0.000058"/>
+</kw>
+<tag>login</tag>
+<status status="PASS" start="2025-02-15T18:09:51.735047" elapsed="0.005130"/>
+</test>
+<doc>Commande pour éxécuter le test : robot -d "Resultats/login/" -i "login" Tests
+Keywords SeleniumLibrary : https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</doc>
+<status status="PASS" start="2025-02-15T18:09:51.299015" elapsed="0.442441"/>
+</suite>
+<suite id="s1-s2" name="Login Logout" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\Tests\login_logout.robot">
+<test id="s1-s2-t1" name="Parcours Complet" line="18">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.747910" elapsed="0.000282"/>
+</kw>
+<kw name="open OrangeHRM">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.748968" elapsed="0.000096"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.749207" elapsed="0.000074"/>
+</kw>
+<status status="PASS" start="2025-02-15T18:09:51.748712" elapsed="0.000630"/>
+</kw>
+<kw name="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.749807" elapsed="0.000138"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.750084" elapsed="0.000110"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.750301" elapsed="0.000085"/>
+</kw>
+<status status="PASS" start="2025-02-15T18:09:51.749593" elapsed="0.000848"/>
+</kw>
+<kw name="logout">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[@class='oxd-userdropdown-tab']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.751044" elapsed="0.000225"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[@class='oxd-userdropdown-tab']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.751472" elapsed="0.000129"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Déconnexion')]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.751847" elapsed="0.000171"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Déconnexion')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.752141" elapsed="0.000093"/>
+</kw>
+<status status="PASS" start="2025-02-15T18:09:51.750720" elapsed="0.001573"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-02-15T18:09:51.752732" elapsed="0.000062"/>
+</kw>
+<tag>login</tag>
+<status status="PASS" start="2025-02-15T18:09:51.747399" elapsed="0.005690"/>
+</test>
+<doc>Commande pour éxécuter le test : robot -d "Resultats/login_logout/" -i "login_logout" Tests
+Keywords SeleniumLibrary : https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</doc>
+<status status="PASS" start="2025-02-15T18:09:51.742850" elapsed="0.011433"/>
+</suite>
+<status status="PASS" start="2025-02-15T18:09:51.254118" elapsed="0.501783"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">login</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="Login" id="s1-s1" pass="1" fail="0" skip="0">Tests.Login</stat>
+<stat name="Login Logout" id="s1-s2" pass="1" fail="0" skip="0">Tests.Login Logout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

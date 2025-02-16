@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-15T18:01:09.499728" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\Tests">
+<suite id="s1-s1" name="Login" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\Tests\login.robot">
+<test id="s1-s1-t1" name="Parcours Complet" line="18">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-02-15T18:01:09.922742" elapsed="0.000310"/>
+</kw>
+<kw name="open OrangeHRM">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-15T18:01:09.924115" level="INFO">Opening browser 'Firefox' to base url 'http://localhost/orangehrm-5.7/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-15T18:01:09.923871" elapsed="36.216249"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-15T18:01:47.147012" level="INFO">Page title is 'OrangeHRM'.</msg>
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-15T18:01:46.140674" elapsed="1.006629"/>
+</kw>
+<status status="PASS" start="2025-02-15T18:01:09.923569" elapsed="37.223989"/>
+</kw>
+<kw name="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-15T18:01:47.150555" level="INFO">Typing text 'admin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T18:01:47.149464" elapsed="3.058012"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-15T18:01:50.208604" level="INFO">Typing text 'Abandass-2024' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T18:01:50.208059" elapsed="3.048333"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-15T18:01:53.257145" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-15T18:01:53.256776" elapsed="10.303160"/>
+</kw>
+<status status="PASS" start="2025-02-15T18:01:47.148402" elapsed="16.412011"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-15T18:02:03.561281" elapsed="4.231305"/>
+</kw>
+<tag>login</tag>
+<status status="PASS" start="2025-02-15T18:01:09.921293" elapsed="57.871718"/>
+</test>
+<doc>Commande pour éxécuter le test : robot -d "Resultats/login/" -i "login" Tests
+Keywords SeleniumLibrary : https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</doc>
+<status status="PASS" start="2025-02-15T18:01:09.541409" elapsed="58.254039"/>
+</suite>
+<status status="PASS" start="2025-02-15T18:01:09.502137" elapsed="58.296705"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Login" id="s1-s1" pass="1" fail="0" skip="0">Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.11 on win32)" generated="20250216 20:38:58.127" rpa="false" schemaversion="3">
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-02-17T00:33:10.170953" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\Tests">
 <suite id="s1-s1" name="Login Logout" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\Tests\login_logout.robot">
 <test id="s1-s1-t1" name="Parcours Complet" line="18">
-<kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
 <arg>1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20250216 20:38:58.363" endtime="20250216 20:38:58.363"/>
+<status status="PASS" start="2025-02-17T00:33:10.800527" elapsed="0.000000"/>
 </kw>
 <kw name="open OrangeHRM">
-<kw name="Open Browser" library="SeleniumLibrary">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-17T00:33:10.800527" level="INFO">Opening browser 'Firefox' to base url 'http://localhost/orangehrm-5.7/web/index.php/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20250216 20:38:58.363" level="INFO">Opening browser 'Firefox' to base url 'http://localhost/orangehrm-5.7/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20250216 20:38:58.363" endtime="20250216 20:39:17.821"/>
+<status status="PASS" start="2025-02-17T00:33:10.800527" elapsed="10.881548"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-17T00:33:22.695494" level="INFO">Page title is 'OrangeHRM'.</msg>
 <arg>OrangeHRM</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20250216 20:39:18.826" level="INFO">Page title is 'OrangeHRM'.</msg>
-<status status="PASS" starttime="20250216 20:39:17.821" endtime="20250216 20:39:18.826"/>
+<status status="PASS" start="2025-02-17T00:33:21.682075" elapsed="1.013419"/>
 </kw>
-<status status="PASS" starttime="20250216 20:38:58.363" endtime="20250216 20:39:18.826"/>
+<status status="PASS" start="2025-02-17T00:33:10.800527" elapsed="11.894967"/>
 </kw>
 <kw name="login">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=username</arg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-17T00:33:22.695494" level="INFO">Typing text 'admin' into text field 'name=username'.</msg>
+<arg>${UsernameInputBox}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250216 20:39:18.826" level="INFO">Typing text 'admin' into text field 'name=username'.</msg>
-<status status="PASS" starttime="20250216 20:39:18.826" endtime="20250216 20:39:21.874"/>
+<status status="PASS" start="2025-02-17T00:33:22.695494" elapsed="3.082707"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=password</arg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-17T00:33:25.778201" level="INFO">Typing text 'Abandass-2024' into text field 'name=password'.</msg>
+<arg>${PasswordInputBox}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20250216 20:39:21.874" level="INFO">Typing text 'Abandass-2024' into text field 'name=password'.</msg>
-<status status="PASS" starttime="20250216 20:39:21.874" endtime="20250216 20:39:24.891"/>
+<status status="PASS" start="2025-02-17T00:33:25.778201" elapsed="3.044899"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath=//button[@type='submit']</arg>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-17T00:33:28.823100" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20250216 20:39:24.891" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20250216 20:39:24.891" endtime="20250216 20:39:30.136"/>
+<status status="PASS" start="2025-02-17T00:33:28.823100" elapsed="8.268382"/>
 </kw>
-<status status="PASS" starttime="20250216 20:39:18.826" endtime="20250216 20:39:30.136"/>
+<status status="PASS" start="2025-02-17T00:33:22.695494" elapsed="14.396838"/>
 </kw>
 <kw name="logout">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//span[@class='oxd-userdropdown-tab']</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250216 20:39:30.136" endtime="20250216 20:39:32.239"/>
+<status status="PASS" start="2025-02-17T00:33:37.094509" elapsed="2.039583"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-17T00:33:39.134669" level="INFO">Clicking element 'xpath=//span[@class='oxd-userdropdown-tab']'.</msg>
 <arg>xpath=//span[@class='oxd-userdropdown-tab']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250216 20:39:32.239" level="INFO">Clicking element 'xpath=//span[@class='oxd-userdropdown-tab']'.</msg>
-<status status="PASS" starttime="20250216 20:39:32.239" endtime="20250216 20:39:34.473"/>
+<status status="PASS" start="2025-02-17T00:33:39.134669" elapsed="2.232733"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//a[contains(text(),'Logout')]</arg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LogoutButton}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20250216 20:39:34.473" endtime="20250216 20:39:36.505"/>
+<status status="PASS" start="2025-02-17T00:33:41.367402" elapsed="2.024998"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//a[contains(text(),'Logout')]</arg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-17T00:33:43.392400" level="INFO">Clicking element 'xpath=//a[contains(text(),'Logout')]'.</msg>
+<arg>${LogoutButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20250216 20:39:36.505" level="INFO">Clicking element 'xpath=//a[contains(text(),'Logout')]'.</msg>
-<status status="PASS" starttime="20250216 20:39:36.505" endtime="20250216 20:39:39.191"/>
+<status status="PASS" start="2025-02-17T00:33:43.392400" elapsed="3.737027"/>
 </kw>
-<status status="PASS" starttime="20250216 20:39:30.136" endtime="20250216 20:39:39.191"/>
+<status status="PASS" start="2025-02-17T00:33:37.094509" elapsed="10.034918"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20250216 20:39:39.191" endtime="20250216 20:39:43.279"/>
+<status status="PASS" start="2025-02-17T00:33:47.129427" elapsed="4.613143"/>
 </kw>
 <tag>login</tag>
 <tag>login_logout</tag>
-<status status="PASS" starttime="20250216 20:38:58.363" endtime="20250216 20:39:43.279"/>
+<status status="PASS" start="2025-02-17T00:33:10.800527" elapsed="40.942043"/>
 </test>
 <doc>Commande pour éxécuter le test : robot -d "Resultats/login_logout/" -i "login_logout" Tests
 Keywords SeleniumLibrary : https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</doc>
-<status status="PASS" starttime="20250216 20:38:58.153" endtime="20250216 20:39:43.284"/>
+<status status="PASS" start="2025-02-17T00:33:10.217358" elapsed="41.528831"/>
 </suite>
-<status status="PASS" starttime="20250216 20:38:58.127" endtime="20250216 20:39:43.284"/>
+<status status="PASS" start="2025-02-17T00:33:10.170953" elapsed="41.575236"/>
 </suite>
 <statistics>
 <total>
@@ -97,8 +97,8 @@ Keywords SeleniumLibrary : https://robotframework.org/SeleniumLibrary/SeleniumLi
 <stat pass="1" fail="0" skip="0">login_logout</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login Logout">Tests.Login Logout</stat>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Login Logout" id="s1-s1" pass="1" fail="0" skip="0">Tests.Login Logout</stat>
 </suite>
 </statistics>
 <errors>

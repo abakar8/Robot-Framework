@@ -6,7 +6,7 @@ Force Tags      login
 Library         SeleniumLibrary    implicit_wait=0:00:30    timeout=0:00:30
 Test Setup      Set Selenium Speed  1s
 Test Teardown   Close Browser
-#Variables       ../../Ressources/locators.py
+Variables       ../Ressources/locator.py
 
 *** Variables ***
 ${BROWSER}      Firefox
@@ -28,11 +28,11 @@ open OrangeHRM
     Title Should Be    OrangeHRM
 
 login
-    Input Text    name=username    ${USERNAME}
-    Input Text    name=password    ${PASSWORD}
-    Click Button    xpath=//button[@type='submit']
+    Input Text    ${UsernameInputBox}    ${USERNAME}
+    Input Text    ${PasswordInputBox}     ${PASSWORD}
+    Click Button  ${LoginButton}
 logout
-    Wait Until Element Is Visible    xpath=//span[@class='oxd-userdropdown-tab']   timeout=30s
-    Click Element                    xpath=//span[@class='oxd-userdropdown-tab']
-    Wait Until Element Is Visible    xpath=//a[contains(text(),'Logout')]    timeout=30s
-    Click Element                    xpath=//a[contains(text(),'Logout')]
+    Wait Until Element Is Visible    ${MenuProfil}   timeout=30s
+    Click Element                    ${MenuProfil}
+    Wait Until Element Is Visible    ${LogoutButton}    timeout=30s
+    Click Element                    ${LogoutButton}

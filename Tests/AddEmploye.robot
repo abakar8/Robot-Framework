@@ -6,7 +6,7 @@ Force Tags      login
 Library         SeleniumLibrary    implicit_wait=0:00:30    timeout=0:00:30
 Test Setup      Set Selenium Speed  1s
 Test Teardown   Close Browser
-#Variables       ../../Ressources/locators.py
+Variables       ../Ressources/locator.py
 
 *** Variables ***
 ${BROWSER}      Firefox
@@ -33,23 +33,23 @@ open OrangeHRM
     Title Should Be    OrangeHRM
 
 login
-    Input Text    name=username    ${USERNAME}
-    Input Text    name=password    ${PASSWORD}
-    Click Button    xpath=//button[@type='submit']
+    Input Text    ${UsernameInputBox}    ${USERNAME}
+    Input Text    ${PasswordInputBox}     ${PASSWORD}
+    Click Button  ${LoginButton}
 logout
-    Wait Until Element Is Visible    xpath=//span[@class='oxd-userdropdown-tab']   timeout=30s
-    Click Element                    xpath=//span[@class='oxd-userdropdown-tab']
-    Wait Until Element Is Visible    xpath=//a[contains(text(),'Logout')]    timeout=30s
-    Click Element                    xpath=//a[contains(text(),'Logout')]
+    Wait Until Element Is Visible    ${MenuProfil}  timeout=30s
+    Click Element                    ${MenuProfil}
+    Wait Until Element Is Visible    ${LogoutButton}    timeout=30s
+    Click Element                    ${LogoutButton}
 addEmployes
-    Wait Until Element Is Visible    xpath=//span[contains(@class,'oxd-main-menu-item--name') and text()='PIM']
-    Click Element                    xpath=//span[contains(@class, 'oxd-main-menu-item--name') and text()='PIM']
-    Wait Until Element Is Visible    xpath=//h5[@class='oxd-text oxd-text--h5 oxd-table-filter-title']
-    Wait Until Element Is Visible    xpath=//button[normalize-space()='Add']
-    Click Element                    xpath=//button[normalize-space()='Add']
-    Input Text                       name=firstName    ${Prenom}
-    Input Text                       name=lastName     ${Nom}
-    Input Text                       xpath=(//input[@class='oxd-input oxd-input--active'])[2]        ${id}
-    Wait Until Element Is Visible    css=button[type='submit']
-    Click Element                    css=button[type='submit']
-    Wait Until Element Is Visible    xpath=//h6[text()='Personal Details']
+    Wait Until Element Is Visible    ${PimButton}
+    Click Element                    ${PimButton}
+    Wait Until Element Is Visible    ${AddButtonTittle}
+    Wait Until Element Is Visible    ${AddButton}
+    Click Element                    ${AddButton}
+    Input Text                       ${EmployeeFirstName}    ${Prenom}
+    Input Text                       ${EmployeeLastName}     ${Nom}
+    Input Text                       ${IdEmployee}           ${id}
+    Wait Until Element Is Visible    ${SubmitButton}
+    Click Element                    ${SubmitButton}
+    Wait Until Element Is Visible     ${PersonalDetailsTittle}

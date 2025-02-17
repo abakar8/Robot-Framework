@@ -6,7 +6,7 @@ Force Tags      login
 Library         SeleniumLibrary    implicit_wait=0:00:30    timeout=0:00:30
 Test Setup      Set Selenium Speed  1s
 Test Teardown   Close Browser
-#Variables       ../../Ressources/locators.py
+Variables       ../../Ressources/locators.py
 
 *** Variables ***
 ${BROWSER}      Firefox

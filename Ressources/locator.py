@@ -1,7 +1,7 @@
 UsernameInputBox = "name=username"
 PasswordInputBox = "name=password"
 LoginButton = "xpath=//button[@type='submit']"
-LogoutButton="xpath=//a[contains(text(),'Logout')]"
+LogoutButton="xpath=//a[contains(text(),'logout')]"
 MenuProfil="xpath=//span[@class='oxd-userdropdown-tab'] "
 PimButton="xpath=//span[contains(@class,'oxd-main-menu-item--name') and text()='PIM']"
 AddTitle="xpath=//h5[@class='oxd-text oxd-text--h5 oxd-table-filter-title']"

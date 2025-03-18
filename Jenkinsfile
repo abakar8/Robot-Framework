@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/TON_REPO_GITHUB.git'  // Remplace par ton URL GitHub
+                git 'https://github.com/abakar8/Robot-Framework'  // Remplace par ton URL GitHub
             }
         }
 

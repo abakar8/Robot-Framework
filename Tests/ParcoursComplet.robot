@@ -53,10 +53,10 @@ addEmployes
     Click Element                    ${SubmitButton}
     Wait Until Element Is Visible     ${PersonalDetailsTittle}
 addEmpDetail
-   Wait Until Element Is Visible    xpath://label[text()='Nationality']/ancestor::div[contains(@class, 'oxd-input-group')]//div[contains(@class, 'oxd-select-text')]
-    Click Element                   xpath://label[text()='Nationality']/ancestor::div[contains(@class, 'oxd-input-group')]//div[contains(@class, 'oxd-select-text')]
-    Wait Until Element Is Visible    xpath://*[text()='${Nationnalite}']
-    Click Element                   xpath://*[text()='${Nationnalite}']
+   Wait Until Element Is Visible    ${EmpNationality}
+    Click Element                   ${EmpNationality}
+    Wait Until Element Is Visible   ${EmpNationalityInput}='${Nationnalite}']
+    Click Element                   ${EmpNationalityInput}='${Nationnalite}']
     Wait Until Element Is Visible    xpath://label[text()='Marital Status']/ancestor::div[contains(@class, 'oxd-input-group')]//div[contains(@class, 'oxd-select-text')]
     Click Element                   xpath://label[text()='Marital Status']/ancestor::div[contains(@class, 'oxd-input-group')]//div[contains(@class, 'oxd-select-text')]
     Wait Until Element Is Visible    xpath://*[text()='${EtatCivile}']

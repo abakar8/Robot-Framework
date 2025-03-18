@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/abakar8/Robot-Framework.git'  // Remplace par ton URL GitHub
+                git branch: 'main', url: 'https://github.com/abakar8/Robot-Framework.git'
             }
         }
 
@@ -20,7 +20,7 @@ pipeline {
 
         stage('Run Robot Tests') {
             steps {
-                sh 'robot -d Resultats Tests/'  // Exécute les tests et stocke les résultats
+                sh 'robot -d Resultats Tests/'
             }
         }
 

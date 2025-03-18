@@ -14,13 +14,13 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
 
         stage('Run Robot Tests') {
             steps {
-                sh 'robot -d Resultats Tests/'
+                bat 'robot -d Resultats Tests/'
             }
         }
 

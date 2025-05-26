@@ -46,7 +46,7 @@ Ce dépôt contient les scripts de test, les ressources et les configurations n�
 2.  Exécutez les tests à l'aide de la commande `robot` :
 
     ```bash
-    robot -d Resultats/nom_du_test/ Tests/nom_du_fichier_de_test.robot
+    robot -d resultats/nom_du_test/ tests/nom_du_fichier_de_test.robot
     ```
 
     Remplacez `nom_du_test` et `nom_du_fichier_de_test.robot` par les valeurs appropriées.

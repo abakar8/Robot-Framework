@@ -1,0 +1,5 @@
+[ ERROR ] [ DataDriver ] Error in robot file:
+  File "C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\ParcoursComplet.robot", line 0
+[ ERROR ] In source file:
+  File "../jeu_de_donneess/emp_data.csv", line 0
+[ ERROR ] Calling method '_start_suite' of listener 'DataDriver' failed: FileNotFoundError: File attribute was not a full path. Tried to find C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\..\jeu_de_donneess\emp_data.csv but file does not exist.

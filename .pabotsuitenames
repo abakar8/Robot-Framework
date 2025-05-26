@@ -1,0 +1,6 @@
+datasources:71e984a0912b4870bbd6a782bff6f0224c6f39c3
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:6878668deb3371b96a707a533e3f04484928c758
+--suite Tests.ParcoursComplet
+--suite Tests.CopieParcoursComplet

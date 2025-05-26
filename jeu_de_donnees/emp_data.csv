@@ -1,5 +1,5 @@
-firstName,lastName,nationalityId,maritalStatus,dateOfBirth,gender,street1,street2,city,province,countryCode,zipCode,homeTelephone,workTelephone,mobile,workEmail,otherEmail
-Joseph,Henson,54,Other,1984-10-16,2,17310 Deanna Villages Suite 644,Apt. 573,Williamston,KS,DM,84791,664.932.1456x164,370.278.7089x3741,8887997343,charles66@nunez.com,lindsey90@example.net
+${firstName};${lastName};${nationalityId};${maritalStatus};dateOfBirth,gender,street1,street2,city,province,countryCode,zipCode,homeTelephone,workTelephone,mobile,workEmail,otherEmail
+Joseph;Henson;54,Other;1984-10-16;2,17310 Deanna Villages Suite 644,Apt. 573,Williamston,KS,DM,84791,664.932.1456x164,370.278.7089x3741,8887997343,charles66@nunez.com,lindsey90@example.net
 Kristine,Stevens,32,Other,1973-03-13,1,96025 Cline Rue,Apt. 446,Johnstad,MA,LS,67603,+1-412-520-6835x28606,470-410-2558x82094,892.925.3077,john69@nunez.com,rebekah23@example.com
 Caitlin,Mora,73,Single,1972-06-25,2,63366 Regina Causeway Apt. 506,Apt. 408,Torrestown,OH,CZ,41559,783-545-5408x914,(929)248-6103x5976,7066003577,msharp@adams.com,youngbarry@example.com
 Sharon,Larsen,16,Other,1985-12-28,2,17920 Charlotte Throughway,Suite 518,Lake Rogerhaven,MI,QA,43640,530.553.7477x201,647-270-4728x83586,001-330-422-8278x7582,areed@sheppard-potter.com,keith57@example.net

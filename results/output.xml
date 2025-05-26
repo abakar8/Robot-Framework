@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-05-17T21:54:34.523246" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests">
+<suite id="s1-s1" name="ParcoursComplet" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\ParcoursComplet.robot">
+<test id="s1-s1-t1" name="Parcours Complet" line="16">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-05-17T21:54:34.901817" elapsed="0.000000"/>
+</kw>
+<kw name="open OrangeHRM" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-17T21:54:34.901817" level="INFO">Opening browser 'Firefox' to base url 'http://localhost/orangehrm-5.7/web/index.php/auth/login'.</msg>
+<msg time="2025-05-17T21:54:39.969879" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-05-17T21:54:39.969879" level="FAIL">WebDriverException: Message: Process unexpectedly closed with status 0
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-05-17T21:54:34.901817" elapsed="5.078774">WebDriverException: Message: Process unexpectedly closed with status 0
+</status>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2025-05-17T21:54:39.982447" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-17T21:54:34.901817" elapsed="5.080630">WebDriverException: Message: Process unexpectedly closed with status 0
+</status>
+</kw>
+<kw name="login" owner="Keywords">
+<status status="NOT RUN" start="2025-05-17T21:54:39.983287" elapsed="0.000000"/>
+</kw>
+<kw name="addEmployes" owner="Keywords">
+<status status="NOT RUN" start="2025-05-17T21:54:39.983287" elapsed="0.000000"/>
+</kw>
+<kw name="addEmpDetail" owner="Keywords">
+<status status="NOT RUN" start="2025-05-17T21:54:39.983287" elapsed="0.000000"/>
+</kw>
+<kw name="logout" owner="Keywords">
+<status status="NOT RUN" start="2025-05-17T21:54:39.983287" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-17T21:54:39.983287" elapsed="0.000000"/>
+</kw>
+<tag>ParcoursComplet</tag>
+<status status="FAIL" start="2025-05-17T21:54:34.899910" elapsed="5.083377">WebDriverException: Message: Process unexpectedly closed with status 0
+</status>
+</test>
+<doc>Commande pour éxécuter le test : robot -d "Resultats/ParcoursComplet/" -i "ParcoursComplet" Tests
+Keywords SeleniumLibrary : https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</doc>
+<status status="FAIL" start="2025-05-17T21:54:34.573937" elapsed="5.409350"/>
+</suite>
+<status status="FAIL" start="2025-05-17T21:54:34.527797" elapsed="5.460487"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">ParcoursComplet</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="ParcoursComplet" id="s1-s1" pass="0" fail="1" skip="0">Tests.ParcoursComplet</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-17T21:54:34.896141" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\ParcoursComplet.robot", line 0</msg>
+<msg time="2025-05-17T21:54:34.896141" level="ERROR">In source file:
+  File "C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\..\jeu_de_donnees\emp_data.csv", line 0</msg>
+<msg time="2025-05-17T21:54:34.899910" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: AttributeError: No "Test template" keyword found for first test case.</msg>
+</errors>
+</robot>

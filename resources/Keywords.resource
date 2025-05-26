@@ -2,57 +2,34 @@
 Documentation
 ...             Commande pour éxécuter le test : robot -d "Resultats/ParcoursComplet/" -i "ParcoursComplet" Tests
 ...             Keywords SeleniumLibrary : https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
-Force Tags      ParcoursComplet
 Library         SeleniumLibrary    implicit_wait=0:00:30    timeout=0:00:30
-Test Setup      Set Selenium Speed  1s
-Test Teardown   Close Browser
-Variables       ../Ressources/locator.py
-
-*** Variables ***
-${BROWSER}      Firefox
-${URL}          http://localhost/orangehrm-5.7/web/index.php/auth/login
-${USERNAME}     admin
-${PASSWORD}     Abandass-2024
-${Prenom}       Ali
-${Nom}          Ben
-${id}           111333
-${Nationnalite}    Belgian
-${DateNaissance}    2000-09-12
-${EtatCivile}       Married
-${Sexe}        Male
-****** Test Cases ***
-Parcours Complet
-   [Tags]    ParcoursComplet
-   open OrangeHRM
-   login
-   addEmployes
-   addEmpDetail
-   logout
-
+Variables        ../resources/locator.py
+#Resource        ../resources/variable.robot
 
 
 *** Keywords ***
-open OrangeHRM
-    Open Browser    ${URL}    ${BROWSER}
-    Title Should Be    OrangeHRM
-
-login
-    Input Text    ${UsernameInputBox}    ${USERNAME}
-    Input Text    ${PasswordInputBox}     ${PASSWORD}
-    Click Button  ${LoginButton}
 addEmployes
+    [Arguments]    ${firstName}    ${lastName}    ${id}     ${Nationnalite}   ${EtatCivile}   ${DateNaissance}      ${Sexe}
+    Log    ${firstName}
+    Log    ${lastName}
+    Log    ${id}
+    #${Nationnalite}  ${EtatCivile}  ${DateNaissance}  ${Sexe}
+    Open Browser    http://localhost/orangehrm-5.7/web/index.php/auth/login    Firefox
+    Title Should Be    OrangeHRM
+    Input Text    ${UsernameInputBox}    admin
+    Input Text    ${PasswordInputBox}     Abandass-2024
+    Click Button  ${LoginButton}
     Wait Until Element Is Visible    ${PimButton}
     Click Element                    ${PimButton}
     Wait Until Element Is Visible    ${AddButtonTittle}
     Wait Until Element Is Visible    ${AddButton}
     Click Element                    ${AddButton}
-    Input Text                       ${EmployeeFirstName}    ${Prenom}
-    Input Text                       ${EmployeeLastName}     ${Nom}
+    Input Text                       ${EmployeeFirstName}    ${firstName}
+    Input Text                       ${EmployeeLastName}     ${lastName}
     Input Text                       ${IdEmployee}           ${id}
     Wait Until Element Is Visible    ${SubmitButton}
     Click Element                    ${SubmitButton}
     Wait Until Element Is Visible     ${PersonalDetailsTittle}
-addEmpDetail
    Wait Until Element Is Visible    ${EmpNationality}
     Click Element                   ${EmpNationality}
     Wait Until Element Is Visible   ${EmpNationalityInput}='${Nationnalite}']
@@ -67,11 +44,15 @@ addEmpDetail
     Click Element    xpath://div[@class="oxd-radio-wrapper" and label[contains(.,'${Sexe}')]]
     Wait Until Element Is Visible    css=button[type='submit']
     Click Element                    css=button[type='submit']
+    Wait Until Element Is Visible    css=button[type='submit']
+    Click Element                    css=button[type='submit']
+    Wait Until Element Is Visible    ${MenuProfil}  timeout=30s
+    Click Element                    ${MenuProfil}
+    Click Element                    ${LogoutButton}
 SearcheEmpByName
-        Wait Until Element Is Visible    xpath://li[contains(@class='oxd-topbar-body-nav-tab --visited') and text()='Liste des employés']
-
+        Wait Until Ele ment Is Visible    xpath://li[contains(@class='oxd-topbar-body-nav-tab --visited') and text()='Liste des employés']
 logout
     Wait Until Element Is Visible    ${MenuProfil}  timeout=30s
     Click Element                    ${MenuProfil}
-    Wait Until Element Is Visible    ${LogoutButton}    timeout=30s
+    #Wait Until Element Is Visible    ${LogoutButton}    timeout=30s
     Click Element                    ${LogoutButton}

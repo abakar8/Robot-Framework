@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-05-22T12:14:04.325611" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests">
+<suite id="s1-s1" name="CopieParcoursComplet" source="C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\CopieParcoursComplet.robot">
+<test id="s1-s1-t1" name="Ajouter un Employé" line="16">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary" type="SETUP">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-05-22T12:14:04.507505" elapsed="0.000000"/>
+</kw>
+<kw name="addEmployes">
+<msg time="2025-05-22T12:14:04.507505" level="FAIL">No keyword with name 'addEmployes' found.</msg>
+<arg>${firstName}</arg>
+<arg>${lastName}</arg>
+<arg>${nationalityId}</arg>
+<status status="FAIL" start="2025-05-22T12:14:04.507505" elapsed="0.000000">No keyword with name 'addEmployes' found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T12:14:04.507505" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-22T12:14:04.507505" elapsed="0.000000">No keyword with name 'addEmployes' found.</status>
+</test>
+<doc>Commande pour éxécuter le test : robot -d "Resultats/ParcoursComplet/" -i "ParcoursComplet" Tests
+Keywords SeleniumLibrary : https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html</doc>
+<status status="FAIL" start="2025-05-22T12:14:04.354951" elapsed="0.165113"/>
+</suite>
+<status status="FAIL" start="2025-05-22T12:14:04.345921" elapsed="0.174143"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="CopieParcoursComplet" id="s1-s1" pass="0" fail="1" skip="0">Tests.CopieParcoursComplet</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-22T12:14:04.507505" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\CopieParcoursComplet.robot", line 0</msg>
+<msg time="2025-05-22T12:14:04.507505" level="ERROR">In source file:
+  File "C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\..\jeu_de_donnees\test.csv", line 0</msg>
+<msg time="2025-05-22T12:14:04.507505" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: AttributeError: No "Test template" keyword found for first test case.</msg>
+</errors>
+</robot>

@@ -1,0 +1,27 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.CopieParcoursComplet :: Commande pour éxécuter le test : robot -d "Re...
+==============================================================================
+Ajouter un Employé                                                      
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\CopieParcoursComplet.robot:16
+    T:  Ajouter un Employé    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Formation\Robot FrameWork\OrangeHRM-5.7\tests\CopieParcoursComplet.robot:19
+      addEmployes    ${firstName}    ${lastName}    ${nationalityId}
+      |  ${firstName} = <Unable to define variable value>
+      |  ${lastName} = <Unable to define variable value>
+      |  ${nationalityId} = <Unable to define variable value>
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'addEmployes' found.
+------------------------------------------------------------------------------
+Tests.CopieParcoursComplet :: Commande pour éxécuter le test : rob... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Formation\Robot FrameWork\OrangeHRM-5.7\pabot_results\1\output.xml
